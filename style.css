@@ -1,0 +1,190 @@
+/* Global Variables */
+:root {
+    --green: #3c8453;
+    --beige: #bcaa96;
+    --dark-gray: #222222;
+    --light-gray: #d3d4d6;
+    --off-white: #f6f6f6;
+    --accent: #ed5d0a;
+    --footer-bg: #f0eded;
+}
+
+/* Reset & Box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-gray);
+    background-color: var(--off-white);
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+/* Background Image for Home */
+.background {
+    background: url("/DAy-3/starter-files/placeholder-images/bg-coffee-shop.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Resume header background */
+.resume header::before {
+    background: url("/DAy-3/starter-files/placeholder-images/bg-home-office-studio.jpg") center/cover no-repeat;
+    content: "";
+    display: block;
+    height: 375px;
+    border-radius: 10px;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3em;
+    color: var(--green);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    border-bottom: 2px dashed var(--light-gray);
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    color: var(--green);
+}
+
+/* Paragraphs and Lists */
+p {
+    margin-bottom: 1em;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Resume Section Layout */
+.resume-section {
+    margin-bottom: 50px;
+}
+
+/* Project Item Styling */
+.project-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-block: 30px;
+    border: 1px solid var(--light-gray);
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.04);
+}
+
+.project-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Links */
+a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--accent);
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid var(--light-gray);
+}
+
+footer a {
+    color: var(--green);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* Social Icons */
+.socilas {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.socilas li {
+    display: inline-block;
+}
+
+.socilas img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-item img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
